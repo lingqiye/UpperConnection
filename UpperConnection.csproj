@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Pic\" />
-    <Folder Include="Views\" />
   </ItemGroup>
 
   <ItemGroup>

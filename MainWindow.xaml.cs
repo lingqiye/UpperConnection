@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UpperConnection.Views;
 
 namespace UpperConnection
 {
@@ -20,31 +21,33 @@ namespace UpperConnection
     /// </summary>
     public partial class MainWindow : Window
     {
-        public double WidthValue { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            //初始化全屏
-            this.WindowState = System.Windows.WindowState.Maximized;
-            this.ResizeMode = System.Windows.ResizeMode.NoResize;
-            this.Left = 0.0;
-            this.Top = 0.0;
-            this.Width = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
+            #region 初始化全屏
+            this.WindowState = System.Windows.WindowState.Maximized;//最大化
+            this.ResizeMode = System.Windows.ResizeMode.NoResize;//无法修改最大最小化
+            this.Left = 0.0;//左边距离0
+            this.Top = 0.0;//顶部距离0
+            this.Width = System.Windows.SystemParameters.PrimaryScreenWidth;//获取屏幕宽度
+            this.Height = System.Windows.SystemParameters.PrimaryScreenHeight;//获取屏幕高度
+            #endregion
         }
+
+        #region PCB管理页面
         /// <summary>
-        /// 查看数据
+        /// 导入
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_ViewData_Click(object sender, RoutedEventArgs e)
+        private void btn_Import_Click(object sender, RoutedEventArgs e)
         {
-            StatisticalStatement statisticalStatement=new StatisticalStatement();
-            statisticalStatement.Show();
-            this.Close();
+            PcbData pcbData = new PcbData();
+            pcbData.Show();
         }
+
         /// <summary>
         /// 删除数据
         /// </summary>
@@ -54,5 +57,44 @@ namespace UpperConnection
         {
 
         }
+
+        /// <summary>
+        /// 修改数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Update_Click(object sender, RoutedEventArgs e)
+        {
+            PcbData pcbData = new PcbData();
+            pcbData.Show();
+        }
+
+        /// <summary>
+        /// 拼接PCB
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Splicing_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region 统计报表页面
+        /// <summary>
+        /// 查看数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_ViewData_Click(object sender, RoutedEventArgs e)
+        {
+            StatisticalStatement statisticalStatement = new StatisticalStatement();
+            statisticalStatement.Show();
+
+        }
+
+        #endregion
+
     }
 }

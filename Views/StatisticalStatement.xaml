@@ -9,12 +9,12 @@
     <Grid>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="日期" Binding="{Binding AlarmDay}"/>
-                <DataGridTextColumn Header="序号" Binding="{Binding AlarmNumber}"/>
-                <DataGridTextColumn Header="插片数量" Binding="{Binding AlarmPlugNumber}"/>
-                <DataGridTextColumn Header="PCB板加工数量" Binding="{Binding AlarmPCBNumber}"/>
+                <DataGridTextColumn Header="日期" Width="150" Binding="{Binding AlarmDay}"/>
+                <DataGridTextColumn Header="序号" Width="150" Binding="{Binding AlarmNumber}"/>
+                <DataGridTextColumn Header="插片数量" Width="150" Binding="{Binding AlarmPlugNumber}"/>
+                <DataGridTextColumn Header="PCB板加工数量" Width="150" Binding="{Binding AlarmPCBNumber}"/>
 
-                <DataGridTextColumn Header="PCB板加工效率" Binding="{Binding AlarmPCBEfficiency}"/>
+                <DataGridTextColumn Header="PCB板加工效率" Width="200" Binding="{Binding AlarmPCBEfficiency}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
