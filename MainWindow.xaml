@@ -13,6 +13,7 @@
                     
                     <Canvas Margin="303,5,7,550" Background="LightGray" Height="400">
                         <DataGrid Height="280" Width="273" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="-288" Canvas.Top="113" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
                     </Canvas>
 
                     <Canvas Margin="0,5,1232,550" Background="LightGray" Height="400" Width="290">
@@ -33,8 +34,12 @@
                         <Button  x:Name="btn_orientation"  Content="定位" Height="50"  Width="150" Canvas.Top="90" HorizontalAlignment="Left" VerticalAlignment="Center" />
                         <Button x:Name="btn_out_material" Content="出料" Height="50" Width="150" Canvas.Left="180" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <Button x:Name="btn_wait" Content="排队等待" Height="50" Width="150" Canvas.Left="180" Canvas.Top="90" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
                         <Button x:Name="btn_PCB_Plug" Content="PCB板插片"  Height="50" Canvas.Left="586" HorizontalAlignment="Left" VerticalAlignment="Center" Width="214"/>
                         <Button x:Name="btn_BendInsert_pin" Content="弯折插片引脚"  Height="50" Canvas.Left="586" Canvas.Top="90"  />
+
+
+
 
                     </Canvas>
 
