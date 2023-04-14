@@ -1,0 +1,21 @@
+﻿<Window x:Class="UpperConnection.StatisticalStatement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UpperConnection"
+        mc:Ignorable="d"
+        Title="StatisticalStatement" Height="450" Width="800">
+    <Grid>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="日期" Binding="{Binding AlarmDay}"/>
+                <DataGridTextColumn Header="序号" Binding="{Binding AlarmNumber}"/>
+                <DataGridTextColumn Header="插片数量" Binding="{Binding AlarmPlugNumber}"/>
+                <DataGridTextColumn Header="PCB板加工数量" Binding="{Binding AlarmPCBNumber}"/>
+
+                <DataGridTextColumn Header="PCB板加工效率" Binding="{Binding AlarmPCBEfficiency}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

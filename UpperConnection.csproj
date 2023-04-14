@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\down.png" />
+    <None Remove="image\left.png" />
+    <None Remove="image\up.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\left.png" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="Pic\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\down.png" />
+    <Resource Include="image\right.png" />
+    <Resource Include="image\up.png" />
+  </ItemGroup>
+
+</Project>
