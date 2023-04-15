@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UpperConnection.Database;
 using UpperConnection.Views;
 
 namespace UpperConnection
@@ -25,6 +26,8 @@ namespace UpperConnection
         public MainWindow()
         {
             InitializeComponent();
+
+            MySqldata.Connection();
 
             #region 初始化全屏
             this.WindowState = System.Windows.WindowState.Maximized;//最大化

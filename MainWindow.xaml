@@ -16,7 +16,7 @@
                     </Canvas>
 
                     <Canvas Margin="4,5,1236,319" Background="LightGray" Width="290">
-                        <Button x:Name="btn_Import" Content="导入" HorizontalAlignment="Left" Canvas.Left="200" Canvas.Top="10" VerticalAlignment="Top" Height="64" Width="80" Click="btn_Import_Click"/>
+                        <Button x:Name="btn_Import" Content="导入" HorizontalAlignment="Left" Canvas.Left="200" Canvas.Top="10" VerticalAlignment="Center" Height="64" Width="80" Click="btn_Import_Click"/>
                         <Button x:Name="btn_Delete" Content="删除" Canvas.Left="160" Canvas.Top="100" Height="80" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                         <Button x:Name="btn_Update" Content="修改" Canvas.Left="10" Canvas.Top="100" Height="80" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btn_Update_Click"/>
                         <DataGrid x:Name="dg_PcbName" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" Height="231" Canvas.Left="10" Canvas.Top="185" VerticalAlignment="Top" Width="270" FontSize="20">
@@ -25,7 +25,7 @@
                                 <DataGridTextColumn Header="保存时间" Width="500" Binding="{Binding SaveTime}"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                        <ComboBox Canvas.Left="8" Canvas.Top="20" Width="181" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="39">
+                        <ComboBox Canvas.Left="8" Canvas.Top="30" Width="187" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="30" FontSize="18">
                             <ComboBox.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -34,6 +34,7 @@
                                     <TranslateTransform/>
                                 </TransformGroup>
                             </ComboBox.RenderTransform>
+                            <ListBoxItem Content="Altium Designer" FontSize="18"/>
                         </ComboBox>
                     </Canvas>
 
@@ -59,37 +60,8 @@
 
 
                     <Canvas  Width="1053" Height="340" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="467,410,0,0" Background="LightGray">
-
-                        <RepeatButton x:Name="btnRight" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="200" Canvas.Top="135"  >
-                            <RepeatButton.Background>
-                                <ImageBrush ImageSource="/image/right.png" Stretch="UniformToFill"/>
-                            </RepeatButton.Background>
-                        </RepeatButton>
-
-                        <RepeatButton x:Name="btn_Up" Height="70" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top"  Canvas.Left="120" Canvas.Top="63"  >
-                            <RepeatButton.Background>
-                                <ImageBrush ImageSource="/image/up.png" Stretch="UniformToFill"/>
-                            </RepeatButton.Background>
-                        </RepeatButton>
-
-                        <RepeatButton x:Name="btn_Left" Height="70"  RenderTransformOrigin="0.458,0.534" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="40" Canvas.Top="135" >
-                            <RepeatButton.Background>
-                                <ImageBrush ImageSource="/image/left.png" Stretch="UniformToFill"/>
-                            </RepeatButton.Background>
-                        </RepeatButton>
-
-                        <RepeatButton x:Name="btn_Down" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="120" Canvas.Top="206"  >
-                            <RepeatButton.Background>
-                                <ImageBrush ImageSource="/image/down.png" Stretch="UniformToFill"/>
-                            </RepeatButton.Background>
-                        </RepeatButton>
-                        <Button x:Name="btn_LoadMaterial" Content="送料" Height="50"  Width="150" HorizontalAlignment="Left" Canvas.Left="341" Canvas.Top="113" VerticalAlignment="Top"/>
-                        <Button  x:Name="btn_Orientation"  Content="定位" Height="50"  Width="150" HorizontalAlignment="Left" Canvas.Left="341" Canvas.Top="203" VerticalAlignment="Top" />
-                        <Button x:Name="btn_OutMaterial" Content="出料" Height="50" Width="150" HorizontalAlignment="Left" Canvas.Left="521" Canvas.Top="113" VerticalAlignment="Top"/>
-                        <Button x:Name="btn_Wait" Content="排队等待" Height="50" Width="150" HorizontalAlignment="Left" Canvas.Left="521" Canvas.Top="203" VerticalAlignment="Top" />
-                        <Button x:Name="btn_PcbPlug" Content="PCB板插片"  Height="50" Width="214" HorizontalAlignment="Left" Canvas.Left="795" Canvas.Top="113" VerticalAlignment="Top"/>
-                        <Button x:Name="btn_BendInsertPin" Content="弯折插片引脚"  Height="50" HorizontalAlignment="Left" Canvas.Left="795" Canvas.Top="203" VerticalAlignment="Top"  />
-
+                        <Button Height="84" Canvas.Left="300" Canvas.Top="128" Width="205" HorizontalAlignment="Left" VerticalAlignment="Center" Content="启动"/>
+                        <Button Height="84" Canvas.Left="630" Canvas.Top="128" Width="205" HorizontalAlignment="Left" VerticalAlignment="Center" Content="停止"/>
                     </Canvas>
 
                     <Canvas Margin="10,5,7,345" Background="LightGray" Height="400">
@@ -111,8 +83,8 @@
 
             <TabItem Header="异常/故障记录" Margin="1,1,-1,-1" Width="305" Height="80" FontSize="35" FontWeight="Bold">
                 <Grid Background="#FFE5E5E5"  Height="750">
-                    <Canvas Margin="10,0,10,10">
-                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1490" Height="498" Canvas.Left="10" >
+                    <Canvas Margin="10,10,10,10">
+                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1490" Height="733" Canvas.Left="10" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="报警序号" Width="200" Binding="{Binding AlarmNumber}"/>
                                 <DataGridTextColumn Header="报警时间" Width="300" Binding="{Binding AlarmTime}"/>
@@ -120,8 +92,6 @@
                                 <DataGridTextColumn Header="报警详情" Width="1000" Binding="{Binding AlarmDetails}"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                        <Button x:Name="btn_Export" Content="导出" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Canvas.Left="412" Canvas.Top="579" Height="64"/>
-                        <Button x:Name="btn_SelectWarning" Content="查看数据" Height="64" Canvas.Left="915" Canvas.Top="579" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     </Canvas>
                 </Grid>
             </TabItem>
@@ -129,10 +99,11 @@
             <TabItem Header="统计报表" Margin="-1,-1,-1,-1" Width="305" Height="80" FontSize="35" FontWeight="Bold">
                 <Grid Background="#FFE5E5E5">
                     <Canvas Margin="765,10,0,10" Background="LightGray">
-                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="745" Height="457" Canvas.Left="20" Canvas.Top="73" >
+                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="735" Height="457" Canvas.Left="20" Canvas.Top="73" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="日期"  Width="300" Binding="{Binding Time}"/>
-                                <DataGridTextColumn Header="生产记录" Width="500" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="数据日期"  Width="200" Binding="{Binding AlarmDay}"/>
+                                <DataGridTextColumn Header="工艺名称" Width="250" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="加工记录" Width="300" Binding="{Binding AlarmData}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <Button x:Name="btn_ViewData" Content="详细数据" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btn_ViewData_Click" Canvas.Left="514" Canvas.Top="567" Height="90" Width="157"/>
@@ -141,10 +112,11 @@
                     </Canvas>
 
                     <Canvas Margin="0,10,770,10" Background="LightGray">
-                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="740" Height="457" Canvas.Left="20" Canvas.Top="73" >
+                        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="730" Height="457" Canvas.Left="20" Canvas.Top="73" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="日期"  Width="300" Binding="{Binding AlarmDay}"/>
-                                <DataGridTextColumn Header="插片记录" Width="500" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="数据日期"  Width="200" Binding="{Binding AlarmDay}"/>
+                                <DataGridTextColumn Header="工艺名称" Width="250" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="插片记录" Width="300" Binding="{Binding AlarmData}"/>
                             </DataGrid.Columns>
                         </DataGrid>
 
@@ -156,37 +128,31 @@
             </TabItem>
             <TabItem Header="校准与检修" Margin="-1,-1,-1,-1" Width="305" Height="80" FontSize="35" FontWeight="Bold">
                 <Grid Background="#FFE5E5E5">
-                    <Canvas  Width="1510" Height="340" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="0,411,0,0" Background="LightGray">
+                    <Canvas  Width="1525" Height="751" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="5,10,0,0" Background="LightGray">
 
-                        <RepeatButton x:Name="btnRight1" Height="70" HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Canvas.Left="472" Canvas.Top="135"  >
+                        <RepeatButton x:Name="btnRight1" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="807" Canvas.Top="340"  >
                             <RepeatButton.Background>
                                 <ImageBrush ImageSource="/image/right.png" Stretch="UniformToFill"/>
                             </RepeatButton.Background>
                         </RepeatButton>
 
-                        <RepeatButton x:Name="btn_Up1" Height="70" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Canvas.Left="392" Canvas.Top="63"  >
+                        <RepeatButton x:Name="btn_Up1" Height="70" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top"  Canvas.Left="727" Canvas.Top="268"  >
                             <RepeatButton.Background>
                                 <ImageBrush ImageSource="/image/up.png" Stretch="UniformToFill"/>
                             </RepeatButton.Background>
                         </RepeatButton>
 
-                        <RepeatButton x:Name="btn_Left1" Height="70"  RenderTransformOrigin="0.458,0.534" HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Canvas.Left="312" Canvas.Top="135" >
+                        <RepeatButton x:Name="btn_Left1" Height="70"  RenderTransformOrigin="0.458,0.534" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="647" Canvas.Top="340" >
                             <RepeatButton.Background>
                                 <ImageBrush ImageSource="/image/left.png" Stretch="UniformToFill"/>
                             </RepeatButton.Background>
                         </RepeatButton>
 
-                        <RepeatButton x:Name="btn_Down1" Height="70" HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Canvas.Left="392" Canvas.Top="206"  >
+                        <RepeatButton x:Name="btn_Down1" Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Canvas.Left="727" Canvas.Top="412"  >
                             <RepeatButton.Background>
                                 <ImageBrush ImageSource="/image/down.png" Stretch="UniformToFill"/>
                             </RepeatButton.Background>
                         </RepeatButton>
-                        <Button x:Name="btn_LoadMaterial1" Content="送料" Height="50"  Width="150" HorizontalAlignment="Left" Canvas.Left="613" Canvas.Top="113" VerticalAlignment="Center"/>
-                        <Button  x:Name="btn_Orientation1"  Content="定位" Height="50"  Width="150" HorizontalAlignment="Left" Canvas.Left="613" Canvas.Top="203" VerticalAlignment="Center" />
-                        <Button x:Name="btn_OutMaterial1" Content="出料" Height="50" Width="150" HorizontalAlignment="Left" Canvas.Left="793" Canvas.Top="113" VerticalAlignment="Center"/>
-                        <Button x:Name="btn_Wait1" Content="排队等待" Height="50" Width="150" HorizontalAlignment="Left" Canvas.Left="793" Canvas.Top="203" VerticalAlignment="Center" />
-                        <Button x:Name="btn_PcbPlug1" Content="PCB板插片"  Height="50" Width="214" HorizontalAlignment="Left" Canvas.Left="1067" Canvas.Top="113" VerticalAlignment="Center"/>
-                        <Button x:Name="btn_BendInsertPin1" Content="弯折插片引脚"  Height="50" HorizontalAlignment="Left" Canvas.Left="1067" Canvas.Top="203" VerticalAlignment="Center"  />
 
                     </Canvas>
                 </Grid>
