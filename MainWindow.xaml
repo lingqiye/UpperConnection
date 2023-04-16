@@ -81,14 +81,13 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="异常/故障记录" Margin="1,1,-1,-1" Width="305" Height="80" FontSize="35" FontWeight="Bold">
+            <TabItem Header="异常/故障记录" Margin="1,1,0,-1" Width="305" Height="80" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left">
                 <Grid Background="#FFE5E5E5"  Height="750">
                     <Canvas Margin="10,10,10,10">
                         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1490" Height="733" Canvas.Left="10" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="报警序号" Width="200" Binding="{Binding AlarmNumber}"/>
                                 <DataGridTextColumn Header="报警时间" Width="300" Binding="{Binding AlarmTime}"/>
-                                <DataGridTextColumn Header="报警类型" Width="200" Binding="{Binding AlarmKind}"/>
                                 <DataGridTextColumn Header="报警详情" Width="1000" Binding="{Binding AlarmDetails}"/>
                             </DataGrid.Columns>
                         </DataGrid>
