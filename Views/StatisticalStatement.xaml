@@ -5,30 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UpperConnection"
         mc:Ignorable="d"
-        Title="StatisticalStatement" Height="450" Width="800">
+        Title="StatisticalStatement" Height="864" Width="1536">
     <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,90,0,0" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="日期" Width="100" Binding="{Binding AlarmNumber}"/>
-                <DataGridTextColumn Header="加工时间" Width="100" Binding="{Binding AlarmDay}"/>
-                <DataGridTextColumn Header="工艺名称" Width="100" Binding="{Binding AlarmDay}"/>
-                <DataGridTextColumn Header="插片数量" Width="100" Binding="{Binding AlarmPlugNumber}"/>
-                <DataGridTextColumn Header="PCB板加工数量" Width="100" Binding="{Binding AlarmPCBNumber}"/>
-                <DataGridTextColumn Header="PCB板插片效率" Width="150" Binding="{Binding AlarmPCBEfficiency}"/>
-                <DataGridTextColumn Header="PCB板加工效率" Width="150" Binding="{Binding AlarmPCBEfficiency}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Canvas Margin="0,0,0,350" Background="LightGray" Height="90">
-            <ComboBox Canvas.Left="234" Canvas.Top="18" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ComboBox Canvas.Left="474" Canvas.Top="18" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Content="查看" Canvas.Left="629" Canvas.Top="35" Height="30" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="起始时间：" Canvas.Left="159" Canvas.Top="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="结束时间：" Canvas.Left="399" Canvas.Top="16" RenderTransformOrigin="0.643,0.585" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ComboBox Canvas.Left="234" Canvas.Top="52" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ComboBox Canvas.Left="474" Canvas.Top="52" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="按分钟/小时：" Canvas.Left="147" Canvas.Top="50" RenderTransformOrigin="0.882,0.506" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="分钟/小时区间：" Canvas.Left="375" Canvas.Top="50" RenderTransformOrigin="0.643,0.585" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Content="导出" Canvas.Left="705" Canvas.Top="35" Height="30" Width="60" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Canvas Margin="0,0,0,405" Background="LightGray">
+            <ComboBox Canvas.Left="418" Canvas.Top="114" Width="170" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <ComboBox Canvas.Left="860" Canvas.Top="112" Width="167" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <Button Content="查看" Canvas.Left="1098" Canvas.Top="180" Height="60" Width="110" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" RenderTransformOrigin="0.5,0.963"/>
+            <Label Content="起始时间：" Canvas.Left="250" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <Label Content="结束时间：" Canvas.Left="658" Canvas.Top="112" RenderTransformOrigin="0.643,0.585" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <ComboBox Canvas.Left="418" Canvas.Top="191" Width="170" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <ComboBox Canvas.Left="860" Canvas.Top="189" Width="168" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <Label Content="按分钟/小时：" Canvas.Left="232" Canvas.Top="189" RenderTransformOrigin="0.882,0.506" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <Label Content="分钟/小时区间：" Canvas.Left="646" Canvas.Top="189" RenderTransformOrigin="0.639,0.928" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25"/>
+            <Button Content="导出" Canvas.Left="1268" Canvas.Top="178" Height="60" Width="110" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="25"/>
+            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="20" Height="410" Canvas.Top="440"  Width="1535" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.163"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.597"/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="日期" Width="307" Binding="{Binding AlarmNumber}"/>
+                    <DataGridTextColumn Header="加工时间" Width="307" Binding="{Binding AlarmDay}"/>
+                    <DataGridTextColumn Header="工艺名称" Width="307" Binding="{Binding AlarmDay}"/>
+                    <DataGridTextColumn Header="插片数量" Width="307" Binding="{Binding AlarmPlugNumber}"/>
+                    <DataGridTextColumn Header="PCB板加工数量" Width="305" Binding="{Binding AlarmPCBNumber}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="插片效率统计：" RenderTransformOrigin="0.882,0.506" FontSize="25" HorizontalAlignment="Left" Height="42" Canvas.Left="232" Canvas.Top="282" VerticalAlignment="Top" Width="171"/>
+            <TextBox Canvas.Left="418" TextWrapping="Wrap" Text="" Canvas.Top="286" Width="170" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="加工效率统计：" RenderTransformOrigin="0.882,0.506" FontSize="25" Height="42" Canvas.Left="646" Canvas.Top="282" Width="171" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox Canvas.Left="860" TextWrapping="Wrap" Text="" Canvas.Top="286" Width="168" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Canvas>
 
 

@@ -102,7 +102,7 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="数据日期"  Width="200" Binding="{Binding AlarmDay}"/>
                                 <DataGridTextColumn Header="工艺名称" Width="250" Binding="{Binding AlarmData}"/>
-                                <DataGridTextColumn Header="加工记录" Width="300" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="加工数量" Width="300" Binding="{Binding AlarmData}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <Button x:Name="btn_ViewData" Content="详细数据" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btn_ViewData_Click" Canvas.Left="514" Canvas.Top="567" Height="90" Width="157"/>
@@ -115,7 +115,7 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="数据日期"  Width="200" Binding="{Binding AlarmDay}"/>
                                 <DataGridTextColumn Header="工艺名称" Width="250" Binding="{Binding AlarmData}"/>
-                                <DataGridTextColumn Header="插片记录" Width="300" Binding="{Binding AlarmData}"/>
+                                <DataGridTextColumn Header="插片数量" Width="300" Binding="{Binding AlarmData}"/>
                             </DataGrid.Columns>
                         </DataGrid>
 
