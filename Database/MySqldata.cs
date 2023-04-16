@@ -59,13 +59,13 @@ namespace UpperConnection.Database
             }
 
             //创建工艺文件记录表
-            string sql_craft_file = "CREATE TABLE craft_file (  craft_id INT NOT NULL PRIMARY KEY,  craft_name VARCHAR(255),  craft_savetime DATE\r\n);";
+            string sql_craft_file = "CREATE TABLE tb_CraftFile (  Id INT NOT NULL AUTO_INCREMENT,  Name VARCHAR(255),  SaveTime DATE,IniFile varchar(255),PRIMARY KEY (Id));";
             //创建异常/故障记录数据表
-            string sql_warn = "CREATE TABLE warning (warn_id INT NOT NULL AUTO_INCREMENT, warn_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, warn_type VARCHAR(255), warn_content VARCHAR(255), PRIMARY KEY (warn_id))";
+            string sql_warn = "CREATE TABLE tb_Warning (Id INT NOT NULL AUTO_INCREMENT, Time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, Kind INT, PRIMARY KEY (Id))";
             ////创建统计报表插片统计的数据表
             //string sql_statistics_insert= "CREATE TABLE statistics_insert (insert_id INT NOT NULL AUTO_INCREMENT, insert_day DATE, insert_record VARCHAR(255), PRIMARY KEY (insert_id))";
             //创建统计报表PCB的数据表
-            string sql_statistics_pcbdata = "CREATE TABLE statistics_pcbdata (pcbdata_id INT NOT NULL AUTO_INCREMENT,pcbdata_day DATE,pcbdata_time INT,pcbdata_craft_name VARCHAR(255), pcbdata_process_number INT,pcbdata_pcb_number INT,pcbdata_insert_efficiency DECIMAL(10,2),pcbdata_process_efficiency DECIMAL(10,2),PRIMARY KEY(pcbdata_id))";
+            string sql_statistics_pcbdata = "CREATE TABLE tb_PcbData (Id INT NOT NULL AUTO_INCREMENT,Day DATE,Time INT,CraftId INT,InsertNumber INT, PcbNumber INT,PRIMARY KEY(Id))";
 
 
             #region 第一次创建表

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace UpperConnection.Class
 {
     /// <summary>
-    /// 插片数量统计
+    /// 工艺文件记录表 对应数据库表名称   tb_CraftFile
     /// </summary>
     public class StatisticsInsert
     {
@@ -16,5 +16,6 @@ namespace UpperConnection.Class
         public string craft_name { get; set; }
 
         public DateTime craft_savetime { get; set; }
+        public string craft_IniFile { get; set; }
     }
 }

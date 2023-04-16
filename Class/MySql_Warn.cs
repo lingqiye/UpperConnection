@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace UpperConnection.Class
 {
     /// <summary>
-    /// 异常故障记录
+    /// 异常故障记录 对应数据库表名 tb_Warning
     /// </summary>
     public class MySql_Warn
     {
@@ -15,9 +15,9 @@ namespace UpperConnection.Class
 
         public string warn_time { get; set; }
         
-        public string warn_type { get; set;}
+        public string warn_kind { get; set;}
 
-        public string warn_content { get; set; }
+      
     }
 
     

@@ -23,12 +23,14 @@ namespace UpperConnection
         {
             InitializeComponent();
 
+            #region 初始化全屏
             this.WindowState = System.Windows.WindowState.Maximized;//最大化
             this.ResizeMode = System.Windows.ResizeMode.NoResize;//无法修改最大最小化
             this.Left = 0.0;//左边距离0
             this.Top = 0.0;//顶部距离0
             this.Width = System.Windows.SystemParameters.PrimaryScreenWidth;//获取屏幕宽度
             this.Height = System.Windows.SystemParameters.PrimaryScreenHeight;//获取屏幕高度
+            #endregion
         }
     }
 }
